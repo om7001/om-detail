@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Sleek Dark IT Biodata Portfolio",
+  "description": "An interactive, premium dark-themed biodata builder for IT students. Customize details, upload or view 4 photos, toggle scrolling animations, and print a beautifully formatted physical copy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
