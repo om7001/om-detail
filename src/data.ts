@@ -30,16 +30,16 @@ export const SAMPLE_BIODATA: Biodata = {
     skills: ["Data Analysis", "SQL Programming", "E-Commerce Strategy", "Python Scripting", "Logistics Operations", "Business Intelligence"]
   },
   family: {
-    fatherName: "Bakulbhai Mohanbhai Vankadi",
-    fatherOccupation: "Diamond Broker",
-    motherName: "Sonalben Bakulbhai Vankadi",
-    motherOccupation: "Tutor",
+    fatherName: "Sanjaybhai Vitthalbhai Maniya",
+    fatherOccupation: "Shop Keeper (Shivam Daairy Farm)",
+    motherName: "Geetaben Sanjaybhai Maniya",
+    motherOccupation: "House Wife",
     siblings: [
       {
-        name: "Mithil Bakulbhai Vankadi",
-        relation: "Brother",
-        occupation: "Analyst - Internal Audit (Deloitte, Mumbai)",
-        education: "Bachelors: B.M.S., Mumbai University"
+        name: "Ami Yash Sheta",
+        relation: "Sister",
+        occupation: "Financial Services Representative (FSR)",
+        education: "MCA. Sarvajanik College of Engineering and Technology"
       }
     ]
   },
