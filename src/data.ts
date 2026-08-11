@@ -2,18 +2,19 @@ import { Biodata, ThemeConfig, AnimationPreset } from "./types";
 
 export const SAMPLE_BIODATA: Biodata = {
   personal: {
-    fullName: "Om S. Maniya",
+    fullName: "Yashvi B. Vankadi",
     briefIntro: "I am a humble, kind, family-oriented girl. I'm a food lover who likes to taste more. Also an adventurous person who loves to travel & explore places.",
-    dateOfBirth: "18th November 2002",
-    height: "6ft",
-    weight: "95 kgs",
+    dateOfBirth: "14th January 1999",
+    height: "5ft 2inchs",
+    weight: "55 kgs",
     caste: "Leuva Patel",
-    languagesKnown: ["Gujarati", "English", "Hindi"],
-    hobbies: ["Listening Podcasts", "Foodie", "Exploring Places", "Driving"],
-    nativePlace: "Jaliya, Umarala",
-    address: "A-502 Sukan Flats, near Rajpalace, New Mahollo, Katargam, Surat - 395004",
-    contactName: "Sanjaybhai Maniya",
-    contactPhone: "+91 98259 08437"
+    languagesKnown: ["Gujarati", "English", "Hindi", "Marathi"],
+    hobbies: ["Listening Podcasts", "Foodie", "Exploring Places", "Reading Autobiographies"],
+    nativePlace: "Mandava, Botad",
+    address: "A-9, 202, Shanti Vihar, Opp. Sector 2, Mira Road (E), Thane - 401107",
+    contactName: "Bakulbhai Vankadi",
+    contactPhone: "+91 93 244 90797",
+    customFields: []
   },
   qualifications: [
     {

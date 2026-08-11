@@ -1,0 +1,113 @@
+{
+  "personal": {
+    "fullName": "Jessica",
+    "briefIntro": "I am a humble, kind, family-oriented girl. I'm a food lover who likes to taste more. Also an adventurous person who loves to travel & explore places. Test",
+    "dateOfBirth": "14th January 1999",
+    "height": "5ft 2inchs",
+    "weight": "55 kgs",
+    "caste": "Leuva Patel",
+    "languagesKnown": [
+      "Gujarati",
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "hobbies": [
+      "Listening Podcasts",
+      "Foodie",
+      "Exploring Places",
+      "Reading Autobiographies"
+    ],
+    "nativePlace": "Mandava, Botad",
+    "address": "A-9, 202, Shanti Vihar, Opp. Sector 2, Mira Road (E), Thane - 401107",
+    "contactName": "Bakulbhai Vankadi",
+    "contactPhone": "+91 93 244 90797",
+    "customFields": []
+  },
+  "qualifications": [
+    {
+      "category": "Post Graduation",
+      "degree": "Post Graduation in Data Science",
+      "institution": "Upgrad - IIIT Bangalore"
+    },
+    {
+      "category": "Post Graduation",
+      "degree": "CS - Executive",
+      "institution": "ICSI"
+    },
+    {
+      "category": "Graduation",
+      "degree": "Bachelor of Commerce (B.Com)",
+      "institution": "Bhavan's College Andheri"
+    },
+    {
+      "category": "Graduation",
+      "degree": "Bachelor of Law (L.L.B.)"
+    }
+  ],
+  "profession": {
+    "currentRole": "Manager (E-commerce & Quick Commerce)",
+    "currentCompany": "Madmix",
+    "formerRole": "Business Analyst",
+    "formerCompany": "Planet Paaduks",
+    "skills": [
+      "Data Analysis",
+      "SQL Programming",
+      "E-Commerce Strategy",
+      "Python Scripting",
+      "Logistics Operations",
+      "Business Intelligence"
+    ],
+    "customFields": []
+  },
+  "family": {
+    "fatherName": "Bakulbhai Mohanbhai Vankadi",
+    "fatherOccupation": "Diamond Broker",
+    "motherName": "Sonalben Bakulbhai Vankadi",
+    "motherOccupation": "Tutor",
+    "siblings": [
+      {
+        "name": "Mithil Bakulbhai Vankadi",
+        "relation": "Brother",
+        "occupation": "Analyst - Internal Audit (Deloitte, Mumbai)",
+        "education": "Bachelors: B.M.S., Mumbai University"
+      }
+    ],
+    "customFields": []
+  },
+  "maternal": {
+    "grandfatherName": "Bhimjibhai Talsibhai Gabani",
+    "nativePlace": "Alampar, Umrala",
+    "uncleName": "Malkeshbhai Gabani",
+    "uncleOccupation": "Business Owner (Mumbai)",
+    "customFields": []
+  },
+  "photos": [
+    {
+      "id": 1,
+      "url": "/src/assets/images/photo_1_1786450444862.jpg",
+      "title": "Primary Profile",
+      "caption": "Yashvi B. Vankadi - Main Portrait"
+    },
+    {
+      "id": 2,
+      "url": "/src/assets/images/photo_tech_1783960123937.jpg",
+      "title": "Professional",
+      "caption": "IT & Data Analyst Professional Showcase"
+    },
+    {
+      "id": 3,
+      "url": "/src/assets/images/photo_casual_1783960140038.jpg",
+      "title": "Casual & Travel",
+      "caption": "Adventurous spirit, exploring new places"
+    },
+    {
+      "id": 4,
+      "url": "/src/assets/images/photo_workspace_1783960156340.jpg",
+      "title": "Creative Space",
+      "caption": "Creative workspace & IT student lifestyle"
+    }
+  ],
+  "customSections": [],
+  "watermarkText": "SUjit"
+}

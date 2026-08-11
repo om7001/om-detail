@@ -106,6 +106,7 @@ export default function App() {
       .then(data => {
         if (data && typeof data === "object" && (data.personal || data.qualifications)) {
           setBiodata(data);
+          localStorage.setItem("matrimonial_biodata_details", JSON.stringify(data));
         }
       })
       .catch(err => {
@@ -144,7 +145,11 @@ export default function App() {
         if (!res.ok) throw new Error("Save to database failed");
         return res.json();
       })
-      .then(() => {
+      .then(resData => {
+        if (resData && resData.data) {
+          setBiodata(resData.data);
+          localStorage.setItem("matrimonial_biodata_details", JSON.stringify(resData.data));
+        }
         setSaveStatus("saved");
         setTimeout(() => {
           setSaveStatus("idle");
@@ -522,7 +527,7 @@ export default function App() {
                         </div>
                         <div className="space-y-1.5">
                           <p className={`text-[10px] uppercase font-bold tracking-widest ${activeTheme.primaryClass}`}>Education</p>
-                          <p className="text-xs text-zinc-400">Degree: <span className="text-zinc-200 font-medium">B.Tech / IT</span></p>
+                          <p className="text-xs text-zinc-400">Degree: <span className="text-zinc-200 font-medium">{biodata.qualifications[0]?.degree || "Graduation"}</span></p>
                           <p className="text-xs text-zinc-400">Birth Year: <span className="text-zinc-200 font-medium">{biodata.personal.dateOfBirth.split(" ").pop()}</span></p>
                         </div>
                       </div>

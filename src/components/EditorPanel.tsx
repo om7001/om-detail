@@ -1388,7 +1388,7 @@ export function EditorPanel({
             
             <div className="p-3.5 rounded-lg bg-indigo-500/5 border border-indigo-500/10 text-2xs text-zinc-400">
               <p className="leading-normal">
-                💡 **Pro-Tip**: You can select any local `.jpg` or `.png` files from your device. They will be encoded into secure base64 strings and previewed live on the scrolling website instantly!
+                💡 **Pro-Tip**: Select any local `.jpg`, `.png`, or `.webp` file from your device. It will preview live instantly on the website, and when you click **Save Changes**, the file will be saved directly into `src/assets/images/` on disk and persisted in `src/db.json`!
               </p>
             </div>
           </div>

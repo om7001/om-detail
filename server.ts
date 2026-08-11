@@ -5,6 +5,7 @@ import { createServer as createViteServer } from "vite";
 
 const PORT = 3000;
 const DB_FILE = path.join(process.cwd(), "src", "db.json");
+const IMAGES_DIR = path.join(process.cwd(), "src", "assets", "images");
 
 // Default seed biodata matching SAMPLE_BIODATA
 const SEED_BIODATA = {
@@ -103,15 +104,41 @@ const SEED_BIODATA = {
   customSections: []
 };
 
-// Ensure database file exists
+// Ensure directories exist
 function initDatabase() {
   const dir = path.dirname(DB_FILE);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
+  if (!fs.existsSync(IMAGES_DIR)) {
+    fs.mkdirSync(IMAGES_DIR, { recursive: true });
+  }
   if (!fs.existsSync(DB_FILE)) {
     fs.writeFileSync(DB_FILE, JSON.stringify(SEED_BIODATA, null, 2), "utf8");
     console.log("Database initialized with seed data.");
+  }
+}
+
+// Helper to save base64 data URL to an image file in src/assets/images
+function saveBase64Image(dataUrl: string, photoId: number | string): string {
+  try {
+    const matches = dataUrl.match(/^data:image\/([a-zA-Z0-9]+);base64,(.+)$/);
+    if (!matches || matches.length !== 3) {
+      return dataUrl;
+    }
+    let ext = matches[1].toLowerCase();
+    if (ext === "jpeg") ext = "jpg";
+    const base64Data = matches[2];
+    const buffer = Buffer.from(base64Data, "base64");
+    const filename = `photo_${photoId}_${Date.now()}.${ext}`;
+    const filePath = path.join(IMAGES_DIR, filename);
+
+    fs.writeFileSync(filePath, buffer);
+    console.log(`Saved image to disk: ${filePath}`);
+    return `/src/assets/images/${filename}`;
+  } catch (err) {
+    console.error("Failed to save image to disk:", err);
+    return dataUrl;
   }
 }
 
@@ -120,6 +147,10 @@ async function startServer() {
 
   const app = express();
   app.use(express.json({ limit: "50mb" })); // Support large base64 uploads
+
+  // Serve static assets directory
+  app.use("/src/assets", express.static(path.join(process.cwd(), "src", "assets")));
+  app.use("/assets", express.static(path.join(process.cwd(), "src", "assets")));
 
   // API Route: Get Biodata
   app.get("/api/biodata", (req, res) => {
@@ -140,11 +171,38 @@ async function startServer() {
   app.post("/api/biodata", (req, res) => {
     try {
       const data = req.body;
+      
+      // Process photos if present and decode base64 images into physical files in src/assets/images
+      if (data && Array.isArray(data.photos)) {
+        data.photos = data.photos.map((photo: any, index: number) => {
+          if (photo && photo.url && photo.url.startsWith("data:image/")) {
+            const savedUrl = saveBase64Image(photo.url, photo.id || index + 1);
+            return { ...photo, url: savedUrl };
+          }
+          return photo;
+        });
+      }
+
       fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), "utf8");
-      return res.json({ success: true, message: "Biodata saved successfully" });
+      return res.json({ success: true, message: "Biodata saved successfully", data });
     } catch (e) {
       console.error("Failed to write to database file:", e);
       return res.status(500).json({ error: "Failed to save biodata" });
+    }
+  });
+
+  // API Route: Standalone Image Upload
+  app.post("/api/upload-image", (req, res) => {
+    try {
+      const { imageData, photoId } = req.body;
+      if (!imageData || !imageData.startsWith("data:image/")) {
+        return res.status(400).json({ error: "Invalid image data" });
+      }
+      const savedUrl = saveBase64Image(imageData, photoId || "upload");
+      return res.json({ success: true, url: savedUrl });
+    } catch (e) {
+      console.error("Failed to upload image:", e);
+      return res.status(500).json({ error: "Failed to upload image" });
     }
   });
 
