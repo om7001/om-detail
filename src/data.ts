@@ -4,9 +4,15 @@ export const SAMPLE_BIODATA: Biodata = {
   personal: {
     fullName: "Yashvi B. Vankadi",
     briefIntro: "I am a humble, kind, family-oriented girl. I'm a food lover who likes to taste more. Also an adventurous person who loves to travel & explore places.",
+<<<<<<< HEAD
     dateOfBirth: "14th January 1999",
     height: "5ft 2inchs",
     weight: "55 kgs",
+=======
+    dateOfBirth: "18th November 2002",
+    height: "5ft 11inch",
+    weight: "93 kgs",
+>>>>>>> 9550881b0ba78241ee938eb89ce93ee26fe250a7
     caste: "Leuva Patel",
     languagesKnown: ["Gujarati", "English", "Hindi", "Marathi"],
     hobbies: ["Listening Podcasts", "Foodie", "Exploring Places", "Reading Autobiographies"],
@@ -18,23 +24,9 @@ export const SAMPLE_BIODATA: Biodata = {
   },
   qualifications: [
     {
-      category: "Post Graduation",
-      degree: "Post Graduation in Data Science",
-      institution: "Upgrad - IIIT Bangalore"
-    },
-    {
-      category: "Post Graduation",
-      degree: "CS - Executive",
-      institution: "ICSI"
-    },
-    {
       category: "Graduation",
-      degree: "Bachelor of Commerce (B.Com)",
-      institution: "Bhavan's College Andheri"
-    },
-    {
-      category: "Graduation",
-      degree: "Bachelor of Law (L.L.B.)"
+      degree: "B.Tech Information & Technology",
+      institution: "Ganpat University"
     }
   ],
   profession: {
@@ -45,16 +37,16 @@ export const SAMPLE_BIODATA: Biodata = {
     skills: ["Data Analysis", "SQL Programming", "E-Commerce Strategy", "Python Scripting", "Logistics Operations", "Business Intelligence"]
   },
   family: {
-    fatherName: "Bakulbhai Mohanbhai Vankadi",
-    fatherOccupation: "Diamond Broker",
-    motherName: "Sonalben Bakulbhai Vankadi",
-    motherOccupation: "Tutor",
+    fatherName: "Sanjaybhai Vitthalbhai Maniya",
+    fatherOccupation: "Shop Keeper (Shivam Daairy Farm)",
+    motherName: "Geetaben Sanjaybhai Maniya",
+    motherOccupation: "House Wife",
     siblings: [
       {
-        name: "Mithil Bakulbhai Vankadi",
-        relation: "Brother",
-        occupation: "Analyst - Internal Audit (Deloitte, Mumbai)",
-        education: "Bachelors: B.M.S., Mumbai University"
+        name: "Ami Yash Sheta",
+        relation: "Sister",
+        occupation: "Financial Services Representative (FSR)",
+        education: "MCA. Sarvajanik College of Engineering and Technology"
       }
     ]
   },
