@@ -5,8 +5,8 @@ export const SAMPLE_BIODATA: Biodata = {
     fullName: "Om S. Maniya",
     briefIntro: "I am a humble, kind, family-oriented girl. I'm a food lover who likes to taste more. Also an adventurous person who loves to travel & explore places.",
     dateOfBirth: "18th November 2002",
-    height: "6ft",
-    weight: "95 kgs",
+    height: "5ft 11inch",
+    weight: "93 kgs",
     caste: "Leuva Patel",
     languagesKnown: ["Gujarati", "English", "Hindi"],
     hobbies: ["Listening Podcasts", "Foodie", "Exploring Places", "Driving"],
@@ -17,23 +17,9 @@ export const SAMPLE_BIODATA: Biodata = {
   },
   qualifications: [
     {
-      category: "Post Graduation",
-      degree: "Post Graduation in Data Science",
-      institution: "Upgrad - IIIT Bangalore"
-    },
-    {
-      category: "Post Graduation",
-      degree: "CS - Executive",
-      institution: "ICSI"
-    },
-    {
       category: "Graduation",
-      degree: "Bachelor of Commerce (B.Com)",
-      institution: "Bhavan's College Andheri"
-    },
-    {
-      category: "Graduation",
-      degree: "Bachelor of Law (L.L.B.)"
+      degree: "B.Tech Information & Technology",
+      institution: "Ganpat University"
     }
   ],
   profession: {
