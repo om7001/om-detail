@@ -4,15 +4,9 @@ export const SAMPLE_BIODATA: Biodata = {
   personal: {
     fullName: "Yashvi B. Vankadi",
     briefIntro: "I am a humble, kind, family-oriented girl. I'm a food lover who likes to taste more. Also an adventurous person who loves to travel & explore places.",
-<<<<<<< HEAD
     dateOfBirth: "14th January 1999",
     height: "5ft 2inchs",
     weight: "55 kgs",
-=======
-    dateOfBirth: "18th November 2002",
-    height: "5ft 11inch",
-    weight: "93 kgs",
->>>>>>> 9550881b0ba78241ee938eb89ce93ee26fe250a7
     caste: "Leuva Patel",
     languagesKnown: ["Gujarati", "English", "Hindi", "Marathi"],
     hobbies: ["Listening Podcasts", "Foodie", "Exploring Places", "Reading Autobiographies"],
