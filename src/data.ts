@@ -40,7 +40,7 @@ export const SAMPLE_BIODATA: Biodata = {
         name: "Ami Yash Sheta",
         relation: "Sister",
         occupation: "Financial Services Representative (FSR)",
-        education: "MCA. Sarvajanik College of Engineering and Technology"
+        education: "MCA. Sarvajanik College of Engineering and Technology "
       }
     ]
   },
@@ -50,7 +50,7 @@ export const SAMPLE_BIODATA: Biodata = {
     uncleName: "Malkeshbhai Gabani",
     uncleOccupation: "Business Owner (Mumbai)"
   },
-  watermarkText: "Yashvi B. Vankadi",
+  watermarkText: "OM S. MANIYA",
   photos: [
     {
       id: 1,
